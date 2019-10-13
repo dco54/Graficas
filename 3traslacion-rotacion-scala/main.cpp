@@ -7,33 +7,33 @@
 
 using namespace std;
 
-GLsizei winWidth = 400, winHeight = 300; // Tama駉 inicial de la ventana
+GLsizei winWidth = 400, winHeight = 300; // Tama帽o inicial de la ventana
 int xAnt[20],yAnt[20];
 int i=0,rotar=0;float vy=0,vx=0,escala=1;
 double posCentrx=0,posCetry=0;
 
-// de visualizaci髇.
+// de visualizaci贸n.
 void init (void)
 {
 glClearColor (0.0, 0.0, 1.0, 1.0); // Establecer azul como color ventana de
-// visualizaci髇.
+// visualizaci贸n.
 glMatrixMode (GL_MODELVIEW);
 gluOrtho2D (0.0, 200.0, 0.0, 150.0);
 }
 void displayFcn (void)
 {
-glClear (GL_COLOR_BUFFER_BIT); // Borrar ventana de visualizaci髇.
+glClear (GL_COLOR_BUFFER_BIT); // Borrar ventana de visualizaci贸n.
 glColor3f (1.0, 0.0, 0.0);    // Establecer rojo como color de punto.
-glPointSize (3.0);           // Definir tama駉 de punto 3.0.
+glPointSize (3.0);           // Definir tama帽o de punto 3.0.
 }
 void winReshapeFcn (GLint newWidth, GLint newHeight)
 {
-/*  Reinicializar par醡etros de proyecci髇 y visor */
+/*  Reinicializar par谩metros de proyecci贸n y visor */
 glViewport (0, 0, newWidth, newHeight);
 glMatrixMode (GL_MODELVIEW);
 glLoadIdentity ( );
 gluOrtho2D (0.0, GLdouble (newWidth), 0.0, GLdouble (newHeight));
-/*  Reinicializar par醡etros de tama駉 ventana de visualizaci髇. */ winWidth = newWidth; winHeight = newHeight;
+/*  Reinicializar par谩metros de tama帽o ventana de visualizaci贸n. */ winWidth = newWidth; winHeight = newHeight;
 }
 void plotPoint (GLint x, GLint y)
 {
@@ -193,7 +193,7 @@ void mousePtPlot (int button, int action, int xMouse, int yMouse)
 
 void teclado(unsigned char tecla,int x,int y)
 {
-
+    //teclas designadas para cada funcion especifica
     switch (tecla)
     {
         case 'w': vy=1;trasladar();vy=0;break;
